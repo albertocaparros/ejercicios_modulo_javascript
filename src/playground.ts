@@ -10,7 +10,7 @@ Implementa una función head (inmutable), tal que, dado un array como entrada ex
 y devuelva su primer elemento. Uliza destructuring. */
 
 console.log('------------- EJERCICIO 1 - HEAD -------------------------');
-const head = array => {
+const head = (array: Array<any>) => {
   let [head] = array;
   return head;
 };
@@ -24,7 +24,7 @@ Implementa una función tail (inmutable), tal que, dado un array como entrada
 devuelta todos menos el primer elemento. Uliza rest operator. */
 
 console.log('------------- EJERCICIO 1 - TAIL -------------------------');
-const tail = array => {
+const tail = (array: Array<any>) => {
   let [head, ...rest] = array;
   return rest;
 };
@@ -39,7 +39,7 @@ devuelva todos los elementos menos el úlmo. Uliza los métodos que ofrece
 Array.prototype. */
 
 console.log('------------- EJERCICIO 1 - INIT -------------------------');
-const init = array => {
+const init = (array: Array<any>) => {
   let newArray = array.slice(0, array.length - 1);
   return newArray;
 }; // Implementation here.
@@ -53,7 +53,7 @@ Implementa una función last (inmutable), tal que, dado un array como entrada
 devuelva el úlmo elemento. */
 
 console.log('------------- EJERCICIO 1 - LAST -------------------------');
-const last = array => {
+const last = (array: Array<any>) => {
   let [head, ...rest] = array;
   return rest.pop();
 };
@@ -74,7 +74,7 @@ devuelva la concatenación de ambos. Utiliza rest / spread operators. */
 
 console.log('----------- EJERCICIO 2 + OPCIONAL - CONCAT --------------');
 
-const concat = (...input) => {
+const concat = (...input: Array<String>) => {
   return Array.from(input).join('');
 };
 
@@ -98,7 +98,8 @@ let objeto = {
 let objeto2 = {
   name: 'Mycroft',
   surname: 'Holmes',
-  nationality: 'British'
+  nationality: 'British',
+  occupation: 'Government agent'
 };
 /* Clone
 Implementa una función clone que, a partir de un objeto de entrada source devuelva
